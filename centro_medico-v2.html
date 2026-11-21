@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Centro Médico Vida</title>
+  <link rel="stylesheet" href="centro_medico-v2.css">
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <header class="barra-superior">
+    <div class="logo">
+      <h2>🏥 CENTRO MÉDICO VIDA</h2>
+      <p>Portal de citas médicas</p>
+    </div>
+    <div class="usuario-info">
+      <button id="btn-letra">AA</button>
+      <span class="etiqueta-rol">rol: Paciente Autenticado</span>
+      <span>👤 Usuario</span>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <div class="contenedor">
+    
+    <!-- Menú lateral -->
+    <nav class="menu">
+      <a href="#" class="activo">🏠 Inicio</a>
+      <a href="#" class="activo">📅 Agendar cita</a>
+      <a href="#">🗓️ Mis citas</a>
+      <a href="#">👥 Pacientes</a>
+      <a href="#">🩺 Médicos y horarios</a>
+      <a href="#">⚙️ Configuración</a>
+    </nav>
+
+    <!-- Formulario -->
+    <section class="caja">
+      <p class="nota-obligatorio">* = campos obligatorios</p>
+      <h3>📅 Agendar una cita médica</h3>
+      <p class="subtitulo">Selecciona especialidad, profesional y horario disponible.</p>
+
+      <form id="formulario-cita">
+        <label>Especialidad * (obligatorio)</label>
+        <select id="especialidad">
+          <option value="Medicina general">Medicina general</option>
+          <option value="Pediatría">Pediatría</option>
+          <option value="Cardiología">Cardiología</option>
+        </select>
+
+        <label>Médico * (obligatorio)</label>
+        <select id="medico">
+          <option value="Dra. Ana Torres">Dra. Ana Torres</option>
+          <option value="Dr. Carlos Mendoza">Dr. Carlos Mendoza</option>
+        </select>
+
+        <label>Fecha *</label>
+        <input type="date" id="fecha" value="2026-10-30">
+
+        <label>Horario disponible *</label>
+        <div class="horarios">
+          <button type="button" class="btn-hora" onclick="elegirHora(this, '09:00')">09:00</button>
+          <button type="button" class="btn-hora" onclick="elegirHora(this, '09:30')">09:30</button>
+          <button type="button" class="btn-hora seleccionado" onclick="elegirHora(this, '10:00')">10:00 ✓</button>
+        </div>
+        <p class="ayuda">Solo se muestran horarios habilitados y libres para la fecha seleccionada.</p>
+
+        <label>Motivo de consulta * (obligatorio)</label>
+        <textarea id="motivo" rows="3" placeholder="Describe brevemente el motivo."></textarea>
+
+        <p class="ayuda">Al hacer clic, se registrará su solicitud y recibirá un código de reserva.</p>
+        <button type="submit" class="btn-confirmar">📅 Confirmar cita</button>
+      </form>
+    </section>
+
+    <!-- Resumen -->
+    <aside class="columna-resumen">
+      <div class="caja">
+        <h3>📋 Resumen de la cita</h3>
+        <p><strong>Especialidad Solicitada:</strong><br><span id="res-esp">Medicina general</span></p>
+        <p><strong>Profesional Asignado:</strong><br><span id="res-med">Dra. Ana Torres</span></p>
+        <p><strong>Fecha y Hora Seleccionada:</strong><br><span id="res-fec">2026-10-30, 10:00</span></p>
+        <p><strong>Hora:</strong><br><span id="res-hor">10:00</span></p>
+
+        <div id="estado" class="estado-pendiente">
+          ● PENDIENTE DE CONFIRMACIÓN - Registro Inicial de Solicitud
+        </div>
+      </div>
+
+      <div class="caja">
+        <p><strong>Código de Reserva: <span id="codigo">CM-2026-X123</span></strong></p>
+        <p class="ayuda">Le enviaremos un recordatorio por correo electrónico 24 horas antes si ha autorizado este canal.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="pie">
+    <p>🛡️ Tus datos personales se muestran únicamente a usuarios autorizados.</p>
+    <a href="#" onclick="alert('Sus datos están protegidos por rol y conexión segura HTTPS.')">
+      Ver mi política de privacidad y autorizaciones de canales de contacto
+    </a>
+  </footer>
+
+  <script src="centro_medico-v2.js"></script>
+</body>
+</html>
