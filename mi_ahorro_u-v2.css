@@ -1,0 +1,167 @@
+/* Estilos simples para Mi Ahorro U */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dce3ec;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.celular {
+  width: 350px;
+  background-color: #f8fafc;
+  border: 6px solid #1e293b;
+  border-radius: 25px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.encabezado {
+  text-align: center;
+}
+
+.encabezado h2 {
+  margin: 0;
+  color: #1d4ed8;
+}
+
+.encabezado p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* Tarjeta azul de saldo */
+.tarjeta-saldo {
+  background-color: #2563eb;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.tarjeta-saldo h1 {
+  margin: 5px 0 15px;
+  font-size: 30px;
+}
+
+.fila-totales {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.fila-totales p {
+  margin: 3px 0 0;
+  font-weight: bold;
+}
+
+.botones button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+/* Bloques blancos */
+.bloque {
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.bloque h4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Gráfico semanal */
+.grafico {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 85px;
+}
+
+.barra {
+  width: 30px;
+  background-color: #93c5fd;
+  border-radius: 5px;
+  font-size: 10px;
+  text-align: center;
+  color: #1e293b;
+  font-weight: bold;
+}
+
+.barra.activa {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Barra de meta */
+.barra-fondo {
+  width: 100%;
+  height: 10px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  margin: 8px 0;
+}
+
+.barra-relleno {
+  height: 100%;
+  background-color: #10b981;
+  border-radius: 5px;
+}
+
+.btn-meta {
+  width: 100%;
+  padding: 6px;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1d4ed8;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Alerta */
+.alerta {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* Menú inferior */
+.menu-inferior {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 8px;
+  font-size: 11px;
+}
+
+.menu-inferior a {
+  text-decoration: none;
+  color: #555;
+}
+
+.menu-inferior a.activo {
+  color: #1d4ed8;
+  font-weight: bold;
+}

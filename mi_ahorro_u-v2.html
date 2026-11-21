@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Ahorro U</title>
+  <link rel="stylesheet" href="mi_ahorro_u-v2.css">
+</head>
+<body>
+
+  <div class="celular">
+    <!-- Encabezado -->
+    <header class="encabezado">
+      <h2>💰 MI AHORRO U</h2>
+      <p>Tu dinero, Tus metas</p>
+    </header>
+
+    <!-- Saldo -->
+    <section class="tarjeta-saldo">
+      <p>Saldo disponible</p>
+      <h1 id="saldo">$ 120.50</h1>
+
+      <div class="fila-totales">
+        <div>
+          <small>INGRESOS</small>
+          <p id="ingresos">$350.00</p>
+        </div>
+        <div>
+          <small>EGRESOS</small>
+          <p id="egresos">$229.50</p>
+        </div>
+      </div>
+
+      <div class="botones">
+        <button onclick="agregarIngreso()">+ Ingreso</button>
+        <button onclick="agregarGasto()">- Gasto</button>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="bloque">
+      <h4>Categorías de gastos</h4>
+      <div class="categorias">
+        <div>🍔<br>Comida<br><strong>17%</strong></div>
+        <div>🚌<br>Transporte<br><strong>23%</strong></div>
+        <div>📚<br>Estudio<br><strong>13%</strong></div>
+        <div>🏠<br>Arriendo<br><strong>34%</strong></div>
+      </div>
+    </section>
+
+    <!-- Resumen Semanal -->
+    <section class="bloque">
+      <h4>Resumen Semanal</h4>
+      <div class="grafico">
+        <div class="barra" style="height: 40px;">LUN</div>
+        <div class="barra" style="height: 60px;">MAR</div>
+        <div class="barra" style="height: 30px;">MIÉ</div>
+        <div class="barra activa" style="height: 75px;">JUE</div>
+        <div class="barra" style="height: 50px;">VIE</div>
+        <div class="barra" style="height: 35px;">SÁB</div>
+        <div class="barra" style="height: 25px;">DOM</div>
+      </div>
+    </section>
+
+    <!-- Metas de ahorro -->
+    <section class="bloque">
+      <h4>Mis metas de Ahorro</h4>
+      <p>💻 Nueva laptop: <strong id="texto-meta">$240 / $800</strong></p>
+      <div class="barra-fondo">
+        <div id="barra-progreso" class="barra-relleno" style="width: 30%;"></div>
+      </div>
+      <button class="btn-meta" onclick="abonarMeta()">Abonar $20 a la meta</button>
+    </section>
+
+    <!-- Alerta -->
+    <div id="alerta" class="alerta">
+      ⚠️ <strong>Alerta:</strong> Estás cerca del límite del periodo.
+    </div>
+
+    <!-- Menú inferior -->
+    <nav class="menu-inferior">
+      <a href="#" class="activo">🏠 Inicio</a>
+      <a href="#">🔄 Movimientos</a>
+      <a href="#">📊 Categorías</a>
+      <a href="#">🎯 Metas</a>
+      <a href="#">👤 Perfil</a>
+    </nav>
+  </div>
+
+  <script src="mi_ahorro_u-v2.js"></script>
+</body>
+</html>
